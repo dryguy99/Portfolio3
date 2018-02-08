@@ -1,0 +1,180 @@
+.myappsection {
+  padding-top: 0;
+  margin: 0;
+  width: 100vw;
+ background: url('../images/Sourlands_with_dogs.jpeg');
+}
+.myapp-img {
+  width: 320px;
+  height: 200px;
+  border-radius: 1.2vw;
+}
+span {
+  margin: 0vw 1vw 0vw 1vw;
+  font-size: 1.2vw;
+}
+.title {
+  margin-left: 2vw;
+}
+#mymessage {
+  font-size: 1.3vw;
+}
+.myheader {
+  background: url('../images/paper_1.png');
+}
+.nav>li>a:focus, .nav-tabs>li>a:hover {
+  border-color: none;
+  background: none;
+  border: none;
+  color: #337ab7;
+  outline: none;
+  font-size: 2vw;
+}
+.nav>li>a {
+  font-size: 1.5vw;
+  color: #337ab7;
+}
+.tech {
+  font-size: 2vw;
+}
+#email::placeholder {
+  color: #0000cc;
+}
+#name::placeholder {
+  color: #0000cc;
+}
+#message::placeholder {
+  color: #0000cc;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #0000cc;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #0000cc;
+  opacity: 1;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #0000cc;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #0000cc;
+  opacity: 1;
+}
+input#email, input#name {
+  background: white;
+}
+textarea#message {
+  height: 35vh;
+}
+#counter {
+  color: #0000cc;
+}
+.myresult {
+  display: none;
+  background: #e68a00;
+  color: white;
+  margin-left: 1vw;
+  padding: 1.3vw;
+}
+hr {
+  margin-top: 0.5vw;
+  margin-bottom: 0.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 0.3vw;
+}
+
+.mybar {
+  width: 75vw;
+  background-color: blue;
+  margin: 0.5vw;
+}
+.note {
+  text-align: left;
+  text-decoration: underline;
+  margin-left: 1vw;
+}
+.aboutme {
+  background: url('../images/triangular.png');
+}
+.contactme {
+  /*background: #f2f2f2;*/
+  background: url('../images/triangular.png');
+  border: none;
+  color: white;
+}
+#submit {
+  color: #ffffff;
+}
+.progress-bar {
+  font-weight: 700;
+  font-size: 1.3vw
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img, .myframe {
+  height: 10vw;
+}
+.app-link {
+  margin-top: 0vw;
+  position: relative;
+  top: -130px;
+}
+a.app-mylink {
+  color: #574d57;
+  background: #ffffb3;
+  padding: 5px;
+  border-radius: 8px;
+}
+.navbar {
+  margin-bottom: 0;
+  background: url('../images/paper_1.png');
+}
+
+.flip {
+  -webkit-perspective: 800;
+   width: 320px;
+   height: 200px;
+    position: relative;
+    margin: 50px auto;
+    border-radius: 1.2vw;
+}
+
+.flip .card.flipped {
+  -webkit-transform: rotatey(-180deg);
+}
+.flip .card {
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  border-radius: 1.2vw;
+}
+.flip .card .face {
+  cursor: crosshair;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden ;
+  z-index: 2;
+    font-family: Georgia;
+    font-size: 3em;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 1.2vw;
+}
+.flip .card .front {
+  cursor: crosshair;
+  position: absolute;
+  z-index: 1;
+  background: black;
+  color: white;
+  border-radius: 1.2vw;
+}
+.flip .card .back {
+  -webkit-transform: rotatey(-180deg);
+    background: url('../images/textured_paper.png');
+    color: black;
+    cursor: crosshair;
+    border-radius: 1.2vw;
+}

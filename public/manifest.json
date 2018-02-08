@@ -1,0 +1,13 @@
+{
+  "name": "Timothy Dry's Portfolio",
+  "short_name": "Tim's Site",
+  "description": "Learn anout Tim Dry and how he may help your company.",
+  "start_url": "/?homescreen=1",
+  "background_color": "#0066cc",
+  "theme_color": "#00264d",
+  "icons": [{
+    "src": "favicon.ico",
+    "sizes": "256x256",
+    "type": "image/ico"
+  }]
+}

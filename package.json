@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-recaptcha": "^2.2.0",
+    "latest-version": "^3.1.0",
+    "mapbox-gl": "^0.39.1",
+    "method-override": "^2.3.9",
+    "nodemailer": "^4.0.1",
+    "spdy": "^3.4.7"
+  },
+  "name": "my-portfolio",
+  "version": "3.0.0",
+  "description": "My portfolio as a web developer.",
+  "main": "server.js",
+  "repository": "https://github.com/dryguy99/Portfolio2.git",
+  "author": "Timothy Dry <timothy.dry@verizon.net>",
+  "license": "MIT",
+  "engines": {
+    "node": "6.11.3",
+    "yarn": "0.27.5"
+  }
+}

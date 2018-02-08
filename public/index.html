@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="icon" href="images/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timothy Dry | Portfolio</title>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Prosto+One" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href='css/style.css' />
+    <link rel="stylesheet" href='css/output.css' />
+    <link rel="manifest" href="manifest.json" />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+
+  </head>
+  <body ng-app="myApp" class="myheader">
+    <container class="fluid">
+      <!-- navbar -->
+      <section class='navagation'>
+        <!-- <div class="page-header">
+          <h1 class='title'>Timothy Dry <small> Web Developer</small></h1>
+        </div> -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="navbar navbar-left">
+              <h1 class='title'>Timothy Dry <small> Web Developer</small></h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <!-- To DO: change href to onclick function -->
+                <li id="mystart"><a class='mynav' value='myappsection'>My Apps<span class="sr-only">(current)</span></a></li>
+                <li><a class='mynav' value='aboutme'>About</a></li>
+                <li><a class='mynav' value='contactme'>Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </section>
+      <!-- end navbar -->
+      <!-- my apps section -->
+      <section class='myappsection' id='timsapps' ng-controller="myCtrl">
+        <div class='row'>
+          <div class='col-lg-12 text-center'>
+            <p id='myappdesc'>
+              Thoughtful Astute Solutions ...
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 text-center" ng-repeat="dataset in information">
+            <!-- start app card --->
+            <a class="applink mytitle" href={{dataset.datalink}} target="_blank" rel="noopener"><h3 class="mytitle">{{dataset.datalinkname}}</h3></a>
+            <div class="flip">
+              <div class="card" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
+                <div class="face front">
+                  <img class="myapp-img" ng-src={{dataset.src}} data-name={{dataset.dataname}} data-link={{dataset.datalink}} alt={{dataset.alt}}>
+                  <div class="overlay text-centered"  style={{dataset.color}}>
+                    <div class="appname"><br /><i class={{dataset.fawe}} aria-hidden="true"></i>{{dataset.dataname}}</div>
+                  </div>
+                </div>
+                <div class="face back">
+                  <img class="myapp-img" ng-src={{dataset.srcb}} data-name={{dataset.dataname}} data-link={{dataset.datalink}} alt={{dataset.alt}}>
+
+                    <span class='app-link'>
+                      <a class='app-mylink' href={{dataset.datalink}} target="_blank" rel="noopener">Open App</a>
+                    </span>
+                  </h3>
+                </div>
+              </div>
+            </div> <!-- app card -->
+            <div class="text-center"> <!--- information about the app -->
+              <div class="description text-center">
+                {{dataset.info}}
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- end my apps section -->
+
+      <!-- about me section -->
+      <section id='aboutme' class='aboutme'>
+        <div class='row'>
+          <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+          </div>
+            <div class='col-xs-12 col-sm-10 col-md-8 col-lg-6 text-center'>
+              <img src="images/timothy-dry.jpeg" alt="Timothy Dry" class="" style="border-radius: 9vw" width="50%">
+            </div>
+          <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+          </div>
+          <div class='col-xs-12 col-sm-10 col-md-8 col-lg-6 text-center'>
+              <h3 class='bio1'>Timothy Dry</h3>
+              <p class='bio'>A Web Developer, People Person, Swim Coach, Aquatics Expert and Outdoorsman who likes to travel are just some of the ways to describe me. I fell in love with computers early in life and through the Rutgers Coding Bootcamp, I now know website development.  I spent 28 years working for a non-profit where I started as an Instructor, finished as an Executive Director and always found ways to keep up with technology.  I believe learning is lifelong and I like being on the cutting edge.  Accordingly, I went back to school at Rutgers. I learned HTML, CSS, SASS, Javascript, NodeJS, AngularJS and I am working on React, Magento and React-Native.  I learned to manipulate databases, create Scheema, and build my own REST API's using NodeJS, PHP, MySQL and MongoDB.  I enjoy webkit, CSS animations and  photo manipulation.  I was trained in User Experience in the past and look forward to using it in the future. I see myself as a MEAN or SEAN stack developer, using MVC or MVVM, creating cutting edge web experiences for all to enjoy. This vision is where I will be. <i class="fa fa-smile-o" aria-hidden="true"></i>
+              </p><br />
+              <p class='bio'>Location: Branchburg, NJ</p>
+            </br/>
+            <p class="text-center"><a href='https://drive.google.com/open?id=0B8mY-YMmDRhmMjVsV2prNTZacU0' target='_blank' rel="noopener"><button class="btn btn-primary btn-xs btn-sm btn-lg fa fa-cloud-download"> Resume</button></a></p>
+            <br/>
+          </div>
+          <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+          </div>
+        </div>
+        <div class='row'>
+            <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+            </div>
+            <div class='col-xs-12 col-sm-10 col-md-8 col-lg-6 text-center'>
+              <hr />
+              <h4 class="text-center bio1">Technical Skills</h4>
+              <p class="tech">HTML/5</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                  100%
+                </div>
+              </div>
+              <p class="tech">CSS/3</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                  100%
+                </div>
+              </div>
+              <p class="tech">Javascript</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                  100%
+                </div>
+              </div>
+              <p class="tech">NodeJS</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                  100%
+                </div>
+              </div>
+              <p class="tech">jQuery</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                  100%
+                </div>
+              </div>
+              <p class="tech">Magento</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                  20%
+                </div>
+              </div>
+              <p class="tech">Bootstrap</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                  100%
+                </div>
+              </div>
+              <p class="tech">AngularJS</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
+                  70%
+                </div>
+              </div>
+              <p class="tech">PHP</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                  90%
+                </div>
+              </div>
+              <p class="tech">MySQL</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                  95%
+                </div>
+              </div>
+              <p class="tech">MongoDB</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">
+                  95%
+                </div>
+              </div>
+              <p class="tech">UX</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                  90%
+                </div>
+              </div>
+
+            </div>
+            <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+            </div>
+          </div>
+      </section> <!-- end about me section -->
+      <!-- begin contact me section -->
+      <section id='contactme' class='contactme'>
+        <div class='row'>
+          <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+          </div>
+          <div class='col-xs-12 col-sm-10 col-md-8 col-lg-6'>
+            <h3><b>Contact Me</b></h3>
+          <p id='mymessage'>Want to meet me? Or just Chat? Please send me your questions or requests. :) I love meeting new people!</p>
+          <!-- set up contact form for node.js -->
+          <form name="contact_form" class="contactform ">
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon">Name <i class="fa fa-user" aria-hidden="true"></i></span>
+              <input id='name' type="text" class="form-control" placeholder="John C. Smith" aria-describedby="sizing-addon1"/>
+            </div>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon">Email <i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+              <input id='email' type="text" class="form-control" placeholder="example@gmail.com" aria-describedby="sizing-addon1"/>
+            </div>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon">Message <i class="fa fa-comment-o" aria-hidden="true"></i><br/><span id='counter'>{{500-counter.length}}</span></span>
+              <textarea id='message' name='message'  maxlength='500' type="text" class="form-control" placeholder="Your message here." ng-model="counter" ng-trim="false"></textarea>
+            </div>
+            <br/>
+            <!-- recaptcha form -->
+            <form action="?" method="POST">
+              <div class="g-recaptcha" data-sitekey="6LcA8iYUAAAAANFAEtGIAhVZnhDnLzz8QaQSPpf3"></div>
+              <br/>
+              <div>
+                <button id='submit' type="submit" class='btn btn-primary btn-lg'>Send Message <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                <span class='myresult'></span>
+              </div>
+            </form> <!-- end recaptcha form -->
+          </form> <!-- end of contact me form -->
+              <div id="status"></div> <!-- display sent email or error messages -->
+              <br/>
+
+          </div>
+        </div>
+      </section>
+    </container>
+
+    <footer class="row">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h3 class="sitedesc">I built this site using AngularJS, NodeJS, Javascript,<br />Bootstrap, Font Awesome, Webkit, AJAX, jQuery, HTML5, CSS3 and SASS.<br />All my sites are backed up with Github.</h3>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+        <br />
+        <div class='row'>
+          <div class="col-xs-12 col-sm-4 col-md-4 mypanel">
+            <a href="https://github.com/dryguy99?tab=repositories" target="_blank" rel="noopener" class="thumbnail contactme">
+              <img class='myframe' src="images/Octocat.jpg" alt="GitHub">
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 mypanel">
+            <a href="https://www.linkedin.com/in/timothy-dry-5351b719" target="_blank" rel="noopener" class="thumbnail contactme">
+              <img class='myframe' src="images/linkedin-128.png" alt="LinkedIn">
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 mypanel">
+            <a href="http://stackoverflow.com/users/7416751/tim?tab=profile"  target="_blank" rel="noopener" class="thumbnail contactme">
+              <img class='myframe' src="images/stackoverflow-128.png" alt="Stack Overflow">
+            </a>
+          </div>
+        </div>
+          <div class='col-xs-0 col-sm-1 col-md-2 col-lg-3'>
+          </div>
+        <a id="me" class="mytitle" href="http://www.timdry.net"><h4>Copyright &copy; 2017 Timothy Dry</h4></a>
+      </div>
+    </footer>
+
+
+    <script src="java/app.js"></script>
+    <script src="java/form.js"></script>
+  </body>
+</html>
